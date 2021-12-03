@@ -28,6 +28,20 @@ Array.prototype.customFilter = function (Func) {
     return newArray;
 }
 
+Array.prototype.customFind = function (Func) {
+    let result = new String();
+    let counter = 0;
+    for (let i = 0; i < this.length - 1; i++) {
+        if (Func(this[i], i, this)) {
+            result += this[i];
+            counter++;
+            break;
+        }
+    }
+    return result;
+}
+
+
 Array.prototype.customToString = function () {
     let newString = new String();
     for (let element of this) {
@@ -140,3 +154,6 @@ String.prototype.customSearchMap = function (searchString) {
     return false;
 }
 
+let arr = [212, 32323, 32];
+
+console.log(arr.find(n => n > 2132));
