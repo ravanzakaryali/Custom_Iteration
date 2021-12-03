@@ -153,7 +153,3 @@ String.prototype.customSearchMap = function (searchString) {
     }
     return false;
 }
-
-let arr = [212, 32323, 32];
-
-console.log(arr.find(n => n > 2132));
